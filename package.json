@@ -1,0 +1,27 @@
+{
+  "name": "englishcard",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElenaYakubovskaya/englishCards.git"
+  },
+  "author": "Elena Yakubovskaya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElenaYakubovskaya/englishCards/issues"
+  },
+  "homepage": "https://github.com/ElenaYakubovskaya/englishCards#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.68.0",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
