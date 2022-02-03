@@ -23,10 +23,19 @@ module.exports = {
       filename: './index.html',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader'],
+      },
+    ],
+  },
   resolve: {
     modules: [
       path.resolve(__dirname, 'src'),
-      path.resolve(__diname, 'node_modules'),
+      path.resolve(__dirname, 'node_modules'),
     ],
     extensions: ['.web.js', '.mjs', '.js', '.json', 'web.jsx', '.jsx'],
   },
