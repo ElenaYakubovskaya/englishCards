@@ -1,13 +1,10 @@
 import React from 'react';
+import MainLayout from './Layouts/MainLayout/MainLayout';
+import './styles/globalStyles.css';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { change: true };
-  }
-
   render() {
-    return <div>Hello, World</div>;
+    return <MainLayout />;
   }
 }
 

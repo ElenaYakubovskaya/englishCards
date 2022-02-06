@@ -30,6 +30,16 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.(css)$/,
+        exclude: /node_modules/,
+        use: ['style-loader'],
+      },
+      {
+        test: /\.(css)$/,
+        exclude: /node_modules/,
+        use: ['css-loader'],
+      },
     ],
   },
   resolve: {
@@ -37,6 +47,6 @@ module.exports = {
       path.resolve(__dirname, 'src'),
       path.resolve(__dirname, 'node_modules'),
     ],
-    extensions: ['.web.js', '.mjs', '.js', '.json', 'web.jsx', '.jsx'],
+    extensions: ['.web.js', '.mjs', '.js', '.json', 'web.jsx', '.jsx', '.css'],
   },
 };
