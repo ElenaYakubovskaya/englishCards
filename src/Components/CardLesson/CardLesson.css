@@ -1,0 +1,29 @@
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cards-cardLesson {
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  background: bisque;
+  list-style-type: none;
+  margin: 20px;
+  padding: auto 0;
+}
+
+.cards-cardLesson-numLesson {
+  margin-top: 50px;
+  color: blueviolet;
+  font: small-caps bold 20px/1 sans-serif;
+}
+
+.cards-cardLesson-nameLesson {
+  padding: 15px;
+  font: italic small-caps bold 20px/2 cursive;
+}

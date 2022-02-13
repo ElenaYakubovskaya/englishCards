@@ -1,0 +1,9 @@
+.mainLayout {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  box-shadow: 20px 20px 50px white inset;
+  flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(90deg, #dcbddf, 30%, #fceef7 70%);
+}
