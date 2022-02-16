@@ -6,9 +6,9 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="header-icon">
-          <i id="icon-menu" class="fa-solid fa-bars"></i>
+          <i id="icon-menu" className="fa-solid fa-bars"></i>
         </div>
-
+        <button className="header-theme">light/black</button>
         <h2 className="header-name">English for IT_</h2>
       </div>
     );

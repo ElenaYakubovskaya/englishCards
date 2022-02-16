@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import MainLayout from '../../Layouts/MainLayout/MainLayout';
+import CardLesson from '../CardLesson/CardLesson';
 
 class Lesson extends Component {
   render() {
-    return <MainLayout />;
+    return (
+      <div className="lesson">
+        <CardLesson />
+      </div>
+    );
   }
 }
+
+export default Lesson;
