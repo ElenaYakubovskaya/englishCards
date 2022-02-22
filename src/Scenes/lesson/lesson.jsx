@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import CardLesson from '../CardLesson/CardLesson';
+import styled from 'styled-components';
+
+const Styles = styled.div`
+  .lesson {
+  }
+`;
 
 class Lesson extends Component {
   render() {
     return (
-      <div className="lesson">
-        <CardLesson />
-      </div>
+      <Styles>
+        <div className="lesson"></div>
+      </Styles>
     );
   }
 }

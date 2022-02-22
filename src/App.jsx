@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import MainLayout from './Layouts/MainLayout/MainLayout';
+import styled from 'styled-components';
 
-import './styles/globalStyles.css';
+import RootRouter from './Route/RootRouter';
 
-class App extends React.Component {
+const Styles = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+`;
+
+class App extends Component {
   render() {
-    return <MainLayout />;
+    return (
+      <Styles>
+        <RootRouter />
+      </Styles>
+    );
   }
 }
 
