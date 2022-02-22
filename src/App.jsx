@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
+import MainLayout from './Layouts/MainLayout/MainLayout';
 
 import RootRouter from './Route/RootRouter';
 
@@ -14,7 +15,9 @@ class App extends Component {
   render() {
     return (
       <Styles>
-        <RootRouter />
+        <MainLayout>
+          <RootRouter />
+        </MainLayout>
       </Styles>
     );
   }

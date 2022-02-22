@@ -1,12 +1,13 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import CardLesson from '../Scenes/CardLesson/CardLesson';
 import MainLayout from '../Layouts/MainLayout/MainLayout';
-
+import Welcome from '../Components/Welcom/Welcom';
 const RootRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />} />
+      <Route exact path="/" element={<Welcome />} />
+      <Route exact path="/" element={<MainLayout />} />
       <Route path="/cardLesson" element={<CardLesson />} />
     </Routes>
   );

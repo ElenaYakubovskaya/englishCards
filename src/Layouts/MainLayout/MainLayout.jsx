@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import Header from '../../Components/Header/Header';
 import Footer from '../../Components/Footer/Footer';
-
 import { Link } from 'react-router-dom';
 
 const Styles = styled.div`
@@ -24,17 +23,7 @@ const Styles = styled.div`
     left: 0;
     overflow: auto;
   }
-  .mainLayout-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font: italic small-caps bold 40px/2 cursive;
-    color: #000000bb;
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
+  
   }
 `;
 
@@ -43,10 +32,8 @@ class MainLayout extends Component {
     return (
       <Styles>
         <div className="mainLayout">
-          <Header name="white" />
-          <Link to="/cardLesson" className="mainLayout-link">
-            Go to the list of lessons &#10230;
-          </Link>
+          <Header name="switch theme" />
+          <main>{this.props.children}</main>
           <Footer />
         </div>
       </Styles>

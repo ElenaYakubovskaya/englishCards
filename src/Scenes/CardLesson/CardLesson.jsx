@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import MainLayout from '../../Layouts/MainLayout/MainLayout';
 
 const Styles = styled.div`
   .mainLayout {
@@ -38,11 +37,12 @@ const Styles = styled.div`
     list-style-type: none;
     margin: 10px;
     padding: auto 0;
+    border-radius: 10px;
   }
 
   .cards-cardLesson:hover {
     cursor: pointer;
-    border: 2px solid rgb(218, 153, 221);
+    border: 2px solid #fff3d5;
     border-radius: 50% 20% / 10% 40%;
     margin: 8px;
   }
@@ -50,7 +50,7 @@ const Styles = styled.div`
   .cards-cardLesson-numLesson {
     margin-top: 50px;
     color: blueviolet;
-    font: small-caps bold 20px/1 sans-serif;
+    font: small-caps bold 20px/2 cursive;
   }
 
   .cards-cardLesson-numLesson:hover {
@@ -108,22 +108,18 @@ class CardLesson extends Component {
   render() {
     return (
       <Styles>
-        <MainLayout>
-          <ul className="cards mainLayout ">
-            {this.state.lessons.map((lesson, index) => {
-              return (
-                <li className="cards-cardLesson" key={lesson.name}>
-                  <div className="cards-cardLesson-numLesson">
-                    Lesson {index + 1}
-                  </div>
-                  <div className="cards-cardLesson-nameLesson">
-                    {lesson.name}
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        </MainLayout>
+        <ul className="cards mainLayout ">
+          {this.state.lessons.map((lesson, index) => {
+            return (
+              <li className="cards-cardLesson" key={lesson.name}>
+                <div className="cards-cardLesson-numLesson">
+                  Lesson {index + 1}
+                </div>
+                <div className="cards-cardLesson-nameLesson">{lesson.name}</div>
+              </li>
+            );
+          })}
+        </ul>
       </Styles>
     );
   }

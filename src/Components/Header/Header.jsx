@@ -14,12 +14,12 @@ const Styles = styled.div`
   }
 
   .header-name {
-    padding-right: 50px;
-    margin: 5px;
+    text-align: center;
   }
 
   .button-Sign_in {
     margin: 15px;
+    margin-left: 40px;
     padding: 5px 15px;
     height: 40px;
     text-decoration: none;
