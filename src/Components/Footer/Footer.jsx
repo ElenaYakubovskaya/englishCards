@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Styles = styled.div`
   .footer {
+    box-sizing: border-box;
     display: flex;
     justify-content: flex-end;
     max-width: 100%;
@@ -11,7 +12,6 @@ const Styles = styled.div`
     background-color: rgb(253, 237, 217);
     padding: 2px;
     padding-right: 50px;
-    margin: 0;
 
     font: italic small-caps bold 10px/2 cursive;
     position: fixed;

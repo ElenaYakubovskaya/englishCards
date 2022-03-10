@@ -1,50 +1,37 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Styles = styled.div`
-  .mainLayout {
-    margin: 0;
-    padding: 0;
-    display: block;
-    box-shadow: 20px 20px 50px white inset;
-    flex-grow: 1;
-    width: 100%;
-    background: linear-gradient(90deg, #dcbddf, 30%, #fceef7 70%);
-
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: auto;
-  }
-
+let Styles = styled.div`
   .cards {
+    box-sizing: border-box;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
+    overflow: auto;
+    max-width: 1200px;
+    text-decoration: none;
   }
 
   .cards-cardLesson {
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 10px 40px;
     display: block;
     width: 250px;
     height: 250px;
     background: bisque;
     list-style-type: none;
-    margin: 10px;
     padding: auto 0;
-    border-radius: 10px;
+    border-radius: 15px;
   }
 
   .cards-cardLesson:hover {
     cursor: pointer;
     border: 2px solid #fff3d5;
     border-radius: 50% 20% / 10% 40%;
-    margin: 8px;
   }
 
   .cards-cardLesson-numLesson {
@@ -67,7 +54,6 @@ const Styles = styled.div`
 class CardLesson extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       lessons: [
         { name: 'Getting to know each other', numberLessson: 'lesson 1' },
@@ -104,19 +90,28 @@ class CardLesson extends Component {
       ],
     };
   }
-
+  /*
+  changeStyle = () => {
+    console.log(this.props);
+    Styles = this.props.StylesForLesson;
+  };
+*/
   render() {
     return (
       <Styles>
-        <ul className="cards mainLayout ">
+        <ul className="cards ">
           {this.state.lessons.map((lesson, index) => {
             return (
-              <li className="cards-cardLesson" key={lesson.name}>
-                <div className="cards-cardLesson-numLesson">
-                  Lesson {index + 1}
-                </div>
-                <div className="cards-cardLesson-nameLesson">{lesson.name}</div>
-              </li>
+              <Link to={'Lesson'} key={lesson.name}>
+                <li onClick={this.changeStyle} className="cards-cardLesson">
+                  <div className="cards-cardLesson-numLesson">
+                    Lesson {index + 1}
+                  </div>
+                  <div className="cards-cardLesson-nameLesson">
+                    {lesson.name}
+                  </div>
+                </li>
+              </Link>
             );
           })}
         </ul>

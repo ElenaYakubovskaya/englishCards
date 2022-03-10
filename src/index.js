@@ -5,8 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 const Styles = styled.div`
   * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 `;

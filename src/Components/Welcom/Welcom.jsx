@@ -1,20 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
 const Styles = styled.div`
   .first_window {
-    height: 85vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    overflow: visible;
-    box-sizing: border-box;
     border: 1px solid white;
     padding: 20px;
-    border-radius: 10px;
+
+    margin-top: 200px;
   }
   .greating {
     color: #6f1abd;
@@ -23,7 +21,10 @@ const Styles = styled.div`
   }
 
   .link-auth {
+    border: 1px solid #6f1abd;
+    border-radius: 10px;
     cursor: pointer;
+    padding: 0 20px;
     margin: 15px;
     color: #5c2391;
     font: small-caps bold 25px/2 cursive;
@@ -33,6 +34,7 @@ const Styles = styled.div`
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
+      text-decoration: none;
     }
   }
   .link-lessons {
@@ -55,10 +57,12 @@ const Welcome = () => {
     <Styles>
       <div className="first_window">
         <h3 className="greating">Hi, there!</h3>
-        <Link to={'/cardLesson'}>
+        <Link to={'cardLesson/*'}>
           <p className="link-lessons">Go to the list of lessons &#8594;</p>
         </Link>
-        <p className="link-auth">Sign in</p>
+        <Link to={'Login'} className="link-auth">
+          Sign in
+        </Link>
       </div>
     </Styles>
   );

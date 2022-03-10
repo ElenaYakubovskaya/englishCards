@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
-import MainLayout from './Layouts/MainLayout/MainLayout';
 
 import RootRouter from './Route/RootRouter';
 
 const Styles = styled.div`
   width: 100%;
-  min-height: 100vh;
-  padding: 2rem;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 `;
 
 class App extends Component {
   render() {
     return (
       <Styles>
-        <MainLayout>
-          <RootRouter />
-        </MainLayout>
+        <RootRouter />
       </Styles>
     );
   }
