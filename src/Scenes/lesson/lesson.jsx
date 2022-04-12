@@ -80,41 +80,51 @@ const wordsMap = new Map[
   })
 ]();
 */
-const Styles = styled.div`
-  .lesson {
-  }
-`;
-
 const StylesForLesson = styled.div`
-  .cards {
-    box-sizing: border-box;
-    margin: 50px auto;
+  .lesson {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .lesson-words {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    overflow: auto;
-    max-width: 1200px;
-  }
-
-  .cards-cardLesson {
-    text-align: center;
-    margin: 10px 10px 40px;
-    display: block;
-    width: 300px;
-    height: 50px;
-    background: bisque;
-    list-style-type: none;
-    padding: auto 0;
+    margin: 0 auto;
+    padding-right: 10%;
+    border: 2px solid #fff3d5;
     border-radius: 15px;
   }
 
-  .cards-cardLesson-numLesson {
-    margin-top: 10px;
+  .lesson-list {
+    margin: 40px;
+    list-style-type: none;
     color: blueviolet;
     font: small-caps bold 20px/2 cursive;
+  }
+
+  .lesson-engWord {
+    box-sizing: border-box;
+    width: 700px;
+    margin: 150px auto 10px;
+    background: bisque;
+    text-align: center;
+    font-family: Arial, Helvetica, monospace;
+    font-size: 30px;
+    color: blueviolet;
+    padding: 50px 50px;
+  }
+
+  .lesson-ruWord {
+    box-sizing: border-box;
+    width: 700px;
+    margin: 10px auto 50px;
+    background: bisque;
+    text-align: center;
+    font-family: Arial, Helvetica;
+    padding: 50px 0;
+    font-size: 30px;
+    color: blueviolet;
   }
 `;
 
@@ -123,13 +133,28 @@ class Lesson extends Component {
     return (
       <StylesForLesson>
         <div className="lesson">
-          <ul>
-            <li>
-              <div></div>
-            </li>
+          <ul className="lesson-list">
+            <li>lesson1</li>
+            <li>lesson 2</li>
+            <li>lesson 3</li>
+            <li>lesson 4</li>
+            <li>lesson 5</li>
+            <li>lesson 6</li>
+            <li>lesson 7</li>
+            <li>lesson 8</li>
+            <li>lesson 9</li>
+            <li>lesson 10</li>
+            <li>lesson 11</li>
+            <li>lesson 12</li>
+            <li>lesson 13</li>
+            <li>lesson 14</li>
+            <li>lesson 15</li>
+            <li>lesson 16</li>
           </ul>
-          <div>слово на английском</div>
-          <div>слово на русском</div>
+          <ul className="lesson-words">
+            <div className="lesson-engWord">слово на английском</div>
+            <div className="lesson-ruWord">слово на русском</div>
+          </ul>
         </div>
       </StylesForLesson>
     );

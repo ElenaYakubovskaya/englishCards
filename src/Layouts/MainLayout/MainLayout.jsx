@@ -10,7 +10,7 @@ const Styles = styled.div`
   .mainLayout {
     box-sizing: border-box;
     overflow: auto;
-    margin: 0;
+    margin: 50;
     padding: 0;
     display: block;
     background: linear-gradient(90deg, #dcbddf, 30%, #fceef7 70%);

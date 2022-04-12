@@ -24,7 +24,7 @@ let Styles = styled.div`
     height: 250px;
     background: bisque;
     list-style-type: none;
-    padding: auto 0;
+    padding: 11px 0;
     border-radius: 15px;
   }
 
